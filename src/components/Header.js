@@ -10,9 +10,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#50A4AC',
   },
   headerContent: {
+    flex: 1,
     flexDirection: 'row',
     marginLeft: '4.7%',
     marginRight: '4.8%',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   timeContainer: {
     
