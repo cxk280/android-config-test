@@ -13,6 +13,15 @@ const styles = StyleSheet.create({
     marginTop: '-5.6%',
     backgroundColor: '#FFFFFF',
   },
+  topRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  bottomRow: {
+    flexDirection: 'row-reverse',
+    justifyContent: 'flex-start',
+    // alignItems: 'center',
+  },
   homeIconContainer: {
     
   },
@@ -29,7 +38,8 @@ const styles = StyleSheet.create({
     
   },
   plusIconImage: {
-    
+    width: 50,
+    height: 50,
   },
 });
 
@@ -45,16 +55,20 @@ export default class Body extends Component {
     } = this.props;
     return (
       <View style={styles.container}>
-        <View style={styles.homeIconContainer}>
-          <Image style={styles.homeIconImage} source={require('../assets/home_icon_label.png')} />
-        </View>
-        <View style={styles.moreIconContainer}>
-          <Image style={styles.moreIconImage} source={require('../assets/more_icon.png')} />
-        </View>
-        <View style={styles.plusIconContainer}>
-          <Image style={styles.plusIconImage} source={require('../assets/plus_button.png')} />
+        <View style={styles.topRow}>
+          <View style={styles.homeIconContainer}>
+            <Image style={styles.homeIconImage} source={require('../assets/home_icon_label.png')} />
+          </View>
+          <View style={styles.moreIconContainer}>
+            <Image style={styles.moreIconImage} source={require('../assets/more_icon.png')} />
+          </View>
         </View>
         <Thermostat {...this.props} />
+        <View style={styles.bottomRow}>
+          <View style={styles.plusIconContainer}>
+            <Image style={styles.plusIconImage} source={require('../assets/plus_button.png')} />
+          </View>
+        </View>
       </View>
     );
   }
