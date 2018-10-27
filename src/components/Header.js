@@ -16,12 +16,13 @@ const styles = StyleSheet.create({
     marginRight: '4.8%',
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingBottom: '5.6%'
   },
   timeContainer: {
     
   },
   dateContainer: {
-    
+    paddingRight: '50%',
   },
   shoppingCartContainer: {
     
