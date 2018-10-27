@@ -1,12 +1,10 @@
 import { StackNavigator } from 'react-navigation';
 
-import Home from './containers/Home';
-import Counter from './containers/Counter';
+import Main from './containers/Main';
 
 const AppNavigator = new StackNavigator(
   {
-    Home: { screen: Home },
-    Counter: { screen: Counter },
+    Main: { screen: Main },
   },
   {
     headerMode: 'screen',

@@ -14,9 +14,9 @@ const styles = StyleSheet.create({
 });
 
 export default class Body extends Component {
-  static propTypes = {
-    body: PropTypes.instanceOf(Immutable.Map).isRequired,
-  };
+  // static propTypes = {
+  //   body: PropTypes.instanceOf(Immutable.Map).isRequired,
+  // };
 
   constructor(props) {
     super(props);

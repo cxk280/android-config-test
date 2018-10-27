@@ -6,7 +6,7 @@ import { persistStore, persistReducer } from 'redux-persist'
 import immutableTransform from 'redux-persist-transform-immutable';
 import thunk from 'redux-thunk';
 import reducer from './reducers';
-import * as actionCreators from './actions/counter';
+import * as actionCreators from './actions/header';
 
 let composeEnhancers = compose;
 if (__DEV__) {
