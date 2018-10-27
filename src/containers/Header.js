@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Counter from '../components/Counter';
-import * as CounterActions from '../actions/counter';
+import Header from '../components/Header';
+import * as HeaderActions from '../actions/header';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,26 +21,19 @@ const styles = StyleSheet.create({
 
 @connect(
   state => ({
-    counter: state.counter,
+    header: state.header,
   }),
-  dispatch => bindActionCreators(CounterActions, dispatch),
+  dispatch => bindActionCreators(HeaderActions, dispatch),
 )
-export default class CounterContainer extends Component {
+export default class HeaderContainer extends Component {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
-  };
-
-  handleBack = () => {
-    this.props.navigation.goBack();
   };
 
   render() {
     return (
       <View style={styles.container}>
-        <Counter {...this.props} />
-        <TouchableOpacity onPress={this.handleBack}>
-          <Text style={styles.back}>Back</Text>
-        </TouchableOpacity>
+        <Header {...this.props} />
       </View>
     );
   }

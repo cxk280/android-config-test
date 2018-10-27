@@ -1,13 +1,13 @@
 import Immutable from 'immutable';
 
-const initialState = Immutable.Map({ counter: 0 });
+const initialState = Immutable.Map({ header: 0 });
 
 const actionsMap = {
   increment(state /*, action*/) {
-    return state.update('counter', n => n + 1);
+    return state.update('header', n => n + 1);
   },
   decrement(state /*, action*/) {
-    return state.update('counter', n => n - 1);
+    return state.update('header', n => n - 1);
   },
 };
 

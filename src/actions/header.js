@@ -12,9 +12,9 @@ export function decrement() {
 
 export function incrementIfOdd() {
   return (dispatch, getState) => {
-    const { counter } = getState();
+    const { header } = getState();
 
-    if (counter.get('counter') % 2 === 0) {
+    if (header.get('header') % 2 === 0) {
       return;
     }
 
