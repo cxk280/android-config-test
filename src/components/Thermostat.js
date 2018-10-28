@@ -7,6 +7,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'orange',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  thermostatContainer: {
+    width: '50%',
+    height: '72%',
+    backgroundColor: 'blue',
   },
 });
 
@@ -22,7 +30,8 @@ export default class Thermostat extends Component {
     } = this.props;
     return (
       <View style={styles.container}>
-        <Text>This is the thermostat</Text>
+        <View style={styles.thermostatContainer}>
+        </View> 
       </View>
     );
   }
