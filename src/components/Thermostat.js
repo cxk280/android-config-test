@@ -14,9 +14,34 @@ const styles = StyleSheet.create({
   thermostatContainer: {
     width: '50%',
     height: '72%',
-    backgroundColor: 'blue',
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  hatchCircle: {
+    height: '100%',
+    width: 150,
+    borderRadius: 150/2,
+    backgroundColor: '#42f4eb',
+  },
+  interiorCircle: {
+    position: 'absolute',
+    alignSelf: 'center',
+    width: 75,
+    height: 75,
+    borderRadius: 75/2,
+    backgroundColor: '#ffc0cb',
+  },
+  tempButton: {
+    position: 'absolute',
+    width: 50,
+    height: 50,
+    borderRadius: 50/2,
+    backgroundColor: 'red',
   },
 });
+
+
 
 export default class Thermostat extends Component {
 
@@ -31,6 +56,12 @@ export default class Thermostat extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.thermostatContainer}>
+          <View style={styles.hatchCircle}>
+          </View>
+          <View style={styles.interiorCircle}>
+          </View>
+          <View style={styles.tempButton}>
+          </View>
         </View> 
       </View>
     );
